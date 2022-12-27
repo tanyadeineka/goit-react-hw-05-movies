@@ -1,0 +1,33 @@
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+}
+
+.item {
+  align-items: center;
+  display: block;
+  max-width: 300px;
+  /* background-color: blue; */
+  padding: 10px 15px;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.link:hover {
+  color: tomato;
+}
