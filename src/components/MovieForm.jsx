@@ -1,5 +1,5 @@
 import css from './MovieForm.module.css';
-import { ReactComponent as SearchIcon } from './svg/Search.svg';
+import { ReactComponent as SearchIcon } from '../svg/Search.svg';
 
 export const MovieForm = ({ onSubmit, value }) => {
   return (
