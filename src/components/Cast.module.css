@@ -1,0 +1,34 @@
+.list {
+  margin-right: auto;
+  margin-left: auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 230px;
+  padding: 10px 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.name {
+  padding: 5px;
+  text-align: center;
+}
+
+.character {
+  padding: 5px;
+  text-align: center;
+}
