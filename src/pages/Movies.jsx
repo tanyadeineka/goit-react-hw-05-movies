@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getByKeywords } from "API";
-import MovieList from '../components/MovieList/MovieList';
-import { MovieForm } from '../components/MovieForm/MovieForm';
+import MovieList from '../components/MovieList';
+import { MovieForm } from '../components/MovieForm';
 import Loader from "../components/Loader";
 import css from "./Movies.module.css";
 
