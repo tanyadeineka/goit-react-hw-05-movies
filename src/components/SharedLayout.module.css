@@ -34,11 +34,6 @@ nav {
 }
 
 .active {
-  display: block;
+  composes: link;
   color: white;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 10px 10px;
-  margin-right: 20px;
-  text-decoration: none;
 }
