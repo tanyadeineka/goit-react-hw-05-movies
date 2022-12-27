@@ -73,8 +73,8 @@ export default function MovieDetails() {
               </Link>
             </li>
             <li className={css.item}>
-              <Link className={css.link} to="reviewes">
-                Reviewes
+              <Link className={css.link} to="reviews">
+                Reviews
               </Link>
             </li>
           </ul>
