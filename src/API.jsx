@@ -55,7 +55,7 @@ export const getCasts = async id => {
   });
 };
 
-export const getReviewes = async id => {
+export const getReviews = async id => {
   const { data } = await axios.get(
     `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`
   );
