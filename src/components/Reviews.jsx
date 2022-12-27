@@ -1,9 +1,9 @@
-import { getReviews } from 'api';
+import { getReviews } from 'API';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
-import css from './Reviewes.module.css';
+import css from './Reviews.module.css';
 
 export default function Reviews() {
   const [isLoading, setIsLoading] = useState(false);
@@ -16,7 +16,7 @@ export default function Reviews() {
     async function onGetReviews() {
       try {
         setIsLoading(true);
-        const reviewes = await getReviews(id);
+        const reviews = await getReviews(id);
         setReviews(reviews);
       } catch {
         setError("We don't have any review about this movie");
