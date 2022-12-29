@@ -10,7 +10,7 @@ export default function Movies() {
     const [isLoading, setIsLoading] = useState(false);
     const [films, setFilms] = useState([]);
     const [error, setError] = useState(null);
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const filmQuery = searchParams.get('query') ?? '';
 
     useEffect(() => {
@@ -20,6 +20,7 @@ export default function Movies() {
                 setIsLoading(true);
                 const filmsData = await getByKeywords(filmQuery);
                 setFilms(filmsData);
+                setError(null);
             } catch {
                 setError('Sorry, we can not get data.');
             } finally {
@@ -29,18 +30,17 @@ export default function Movies() {
         getQueryFilms();
     }, [filmQuery]);
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        setSearchParams({ query: event.target.elements.query.value });
-        event.target.reset();
-    };
-
     return (
       <div className={css.moviesWrapper}>
-            <MovieForm onSubmit={handleSubmit} value={filmQuery} />
-            {error && <p>{error}</p>}
-            {isLoading && <Loader />}
-            <MovieList films={films} /> 
+        <MovieForm />
+        {error && <p>{error}</p>}
+        {isLoading && <Loader />}
+        {filmQuery !== '' && films.length === 0 && !isLoading && (
+          <p className={css.notify}>
+            We don't have this film. Try do other query
+          </p>
+        )}
+        {films.length > 0 && <MovieList films={films} />}
       </div>
     );
 }
