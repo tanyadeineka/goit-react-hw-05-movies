@@ -14,8 +14,20 @@ code {
     monospace;
 }
 
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
+Link {
+  color: black;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.loader {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  width: 600px;
 }
