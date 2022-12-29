@@ -8,14 +8,22 @@ export default function MovieList({ films }) {
     <ul className={css.list}>
       {films.map(film => (
         <li key={film.id} className={css.item}>
-          <img
-            src={`https://image.tmdb.org/t/p/w300/${film.poster}`}
-            alt={film.title}
-            width={300}
-          ></img>
+          {film.poster ? (
+            <img
+              src={`https://image.tmdb.org/t/p/w300/${film.poster}`}
+              alt={film.title}
+              width={300}
+            />
+          ) : (
+            <img
+              src="https://img.freepik.com/premium-vector/photo-frame-icon-empty-photo-blank-vector-on-isolated-transparent-background-eps-10_399089-1290.jpg"
+              alt="film poster"
+              width={300}
+            />
+          )}
           <Link
             className={css.link}
-            to={`${film.id}`}
+            to={`/movies/${film.id}`}
             state={{ from: location }}
           >
             {film.title}
