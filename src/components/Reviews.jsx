@@ -18,6 +18,7 @@ export default function Reviews() {
         setIsLoading(true);
         const reviews = await getReviews(id);
         setReviews(reviews);
+        setError(null);
       } catch {
         setError("We don't have any review about this movie");
       } finally {
@@ -26,6 +27,7 @@ export default function Reviews() {
     }
     onGetReviews();
   }, [id]);
+  
   return (
     <>
       {isLoading && <Loader />}
