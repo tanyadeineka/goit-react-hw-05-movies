@@ -1,0 +1,40 @@
+.descriptionWrapper {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+}
+
+img {
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+.description {
+  max-width: 600px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.score {
+  margin-bottom: 10px;
+}
+.overview {
+  margin-bottom: 10px;
+}
+
+.additional {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.item {
+  padding: 5px 20px;
+}
