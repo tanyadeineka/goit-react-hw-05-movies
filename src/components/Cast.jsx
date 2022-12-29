@@ -17,6 +17,7 @@ export default function Cast() {
         setIsLoading(true);
         const actors = await getCasts(id);
         setActors(actors);
+        setError(null);
       } catch {
         setError("We don't have any cast about this movie");
       } finally {
@@ -32,7 +33,7 @@ export default function Cast() {
       <ul className={css.list}>
         {actors.map(actor => {
           return (
-            <li className={css.item} key={actor.name}>
+            <li className={css.item} key={actor.castId}>
               {actor.avatar ? (
                 <img
                   className={css.img}
